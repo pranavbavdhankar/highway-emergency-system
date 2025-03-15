@@ -27,6 +27,12 @@ public class RequestService implements IRequestService {
         newRequest.setId(UUID);
         newRequest.setName(request.getName());
         newRequest.setContact(request.getContact());
+        newRequest.setAddress(request.getAddress());
+        newRequest.setLatitude(request.getLatitude());
+        newRequest.setLongitude(request.getLongitude());
+        newRequest.setAddress(request.getAddress());
+        newRequest.setMessage(request.getMessage());
+        newRequest.setType(request.getType());
         Request savedRequest = requestRepository.save(newRequest);
         if(request.getImageList() != null){
             requestImageService.addRequestImage(request.getImageList(), savedRequest);

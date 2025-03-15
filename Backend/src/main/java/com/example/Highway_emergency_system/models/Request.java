@@ -18,8 +18,14 @@ public class Request {
     @Id
     String id; // Unique Id for
     String name; // Name of the person who reports the incident
+    String type;
     @Column(unique = false)
     String contact; // Contact of the person reporting incident
+    String message;
+    double latitude;
+    double longitude;
+    String address;
     @OneToMany(mappedBy = "request", cascade = CascadeType.ALL, orphanRemoval = true)
     List<RequestImage> imageList; // To store the images
+
 }

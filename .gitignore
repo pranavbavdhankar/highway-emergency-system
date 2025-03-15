@@ -1,0 +1,7 @@
+# Remove nodemodules
+/client/node_modules
+
+# Remove target and .mvn
+/backend/.mvn
+/backend/target
+/backend/.idea

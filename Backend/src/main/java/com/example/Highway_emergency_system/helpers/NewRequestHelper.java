@@ -1,5 +1,7 @@
 package com.example.Highway_emergency_system.helpers;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
@@ -12,10 +14,10 @@ public class NewRequestHelper {
 
     String name; // Name of the person who reports the incident
     String contact; // Contact of the person reporting incident
-    List<MultipartFile> imageList; // To store the images
-
-    public NewRequestHelper(String name, String contact) {
-        this.name = name;
-        this.contact = contact;
-    }
+    String message;
+    double latitude;
+    double longitude;
+    String address;
+    String type;
+    List<MultipartFile> imageList;
 }

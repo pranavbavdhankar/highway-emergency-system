@@ -23,10 +23,13 @@ public class RequestController {
     @PostMapping("/new")
     public ResponseEntity<Response<Request>> newRequest(@RequestParam("imageList") List<MultipartFile> imageList,
                                                         @RequestParam("name") String name,
-                                                        @RequestParam("contact") String  contact) {
-
-        NewRequestHelper request = new NewRequestHelper(name, contact, imageList);
-
+                                                        @RequestParam("contact") String  contact,
+                                                        @RequestParam("latitude") double latitude,
+                                                        @RequestParam("longitude") double longitude,
+                                                        @RequestParam("message") String message,
+                                                        @RequestParam("address") String address,
+                                                        @RequestParam("type") String type) {
+        NewRequestHelper request = new NewRequestHelper(name, contact, message, latitude, longitude, address,type, imageList);
         Request data = requestService.newRequest(request, imageList);
         Response<Request> response = new Response<>();
         response.setData(data);

@@ -1,0 +1,39 @@
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://media.istockphoto.com/id/1454313615/photo/mountain-road-in-autumn.jpg?s=612x612&w=0&k=20&c=b2_3bc6fO02p4bCiK4O1-wam8E6D3xJzdoIu6oU-BVU=');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.home-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.home-description {
+  font-size: 24px;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
